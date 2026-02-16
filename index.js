@@ -30,6 +30,10 @@ app.get("/", (req, res) => {
     res.send("server is running");
 });
 
+app.get("/cron", (req, res) => {
+   res.status(200).send("OK");
+});
+
 app.use("/domain/api/user", userRouter);
 app.use("/domain/api/achievement", achievementRouter);
 app.use("/domain/api/post", postRouter);
